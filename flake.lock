@@ -1,0 +1,37 @@
+{
+  "nodes": {
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1693341273,
+        "narHash": "sha256-wrsPjsIx2767909MPGhSIOmkpGELM9eufqLQOPxmZQg=",
+        "path": "/nix/store/066hr2pmppfzfsn1d6lb9485hniz5p53-source",
+        "rev": "2ab91c8d65c00fd22a441c69bbf1bc9b420d5ea1",
+        "type": "path"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "playdatesdk": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-pJbzr/kxe5WfcJdRBmHcr1BgwDCDCrgmw/W9TLFgMRA=",
+        "type": "tarball",
+        "url": "https://download-cdn.panic.com/playdate_sdk/Linux/PlaydateSDK-2.0.3.tar.gz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://download-cdn.panic.com/playdate_sdk/Linux/PlaydateSDK-2.0.3.tar.gz"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixpkgs": "nixpkgs",
+        "playdatesdk": "playdatesdk"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
