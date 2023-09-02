@@ -60,7 +60,7 @@
 
       PlaydateSimulatorWrapped = pkgs.buildFHSUserEnv {
         name = "PlaydateSimulator";
-        targetPkgs = pkgs: [ pkgs.alsa-lib PlaydateSimulator ];
+        targetPkgs = pkgs: [ pkgs.alsa-lib PlaydateSimulator playdatesdk ];
         runScript = "pds";
       };
     in
@@ -70,6 +70,12 @@
                      pdutil
                      PlaydateSimulatorWrapped
                    ];
+        PLAYDATE_SDK_PATH = playdatesdk;
+      };
+      packages.${system} = {
+        pdc = pdc;
+        pdutil = pdutil;
+        PlaydateSimulator = PlaydateSimulatorWrapped;
         PLAYDATE_SDK_PATH = playdatesdk;
       };
   };
